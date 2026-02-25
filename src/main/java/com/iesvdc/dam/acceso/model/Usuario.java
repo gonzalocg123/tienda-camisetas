@@ -1,12 +1,10 @@
 package com.iesvdc.dam.acceso.model;
 
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -26,6 +24,7 @@ public class Usuario {
   @Email(message = "email no válido")
   private String email;
 
-  @NotBlank(message = "la contraseña es obligatoria")
   private String password;
+
+  private Rol rol;
 }
